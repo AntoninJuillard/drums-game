@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>drums!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@200;300;400;700;800;900&display=swap" rel="stylesheet">
+    <link href="images/icon.png" rel="shortcut icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+
+
+
+    <section class="container">
+        <!-- container of all the content on the top part of the window -->
+      
+        <!-- part to display the background with all little squares -->
+        <div class="background"></div>
+
+        <section class="top-area">
+
+            <div class="music-menu">
+                <!-- part to display and manage volume -->
+                <div class="music-volume">
+                    <svg class = "sound-on" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 17h-5v-10h5v10zm2-10v10l9 5v-20l-9 5zm17 4h-5v2h5v-2zm-1.584-6.232l-4.332 2.5 1 1.732 4.332-2.5-1-1.732zm1 12.732l-4.332-2.5-1 1.732 4.332 2.5 1-1.732z"/></svg>
+                    <svg class = "sound-off" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 17h-5v-10h5v10zm2-10v10l9 5v-20l-9 5zm15.324 4.993l1.646-1.659-1.324-1.324-1.651 1.67-1.665-1.648-1.316 1.318 1.67 1.657-1.65 1.669 1.318 1.317 1.658-1.672 1.666 1.653 1.324-1.325-1.676-1.656z"/></svg>
+                    <div class="music-volume-button">
+                        <div class="less-button">-</div>
+                        <div class="percentage-display">100%</div>
+                        <div class="more-button">+</div>
+                    </div>
+                    <div class="music-volume-bar">
+                        <div class="music-volume-progress"></div>
+                    </div>
+                </div>
+
+                <!-- part to play / pause / clear the player -->
+                <div class="player-buttons">
+                    <button class="play-button">
+                        <img class="pause-button-icon" src="images/pausebutton.png" alt="play"/>
+                        <img class="play-button-icon" src="images/playbutton.png" alt="pause"/>
+                    </button>
+                    <button class="clear-button">✕</button>
+                </div>
+
+                <!-- part to click to display random models on the player -->
+                <div class="models-container">
+                    <button class="models-title">models</button>
+                    <div class="models-button">
+                        <img class="models-img" src="images/random.png" alt="random arrows">
+                    </div>
+
+                </div>
+
+                <!-- part to manage/display bpm -->
+                <div class="bpm-container">
+                    <div class="bpm-less">-</div>
+                    <div class="bpm-display">120</div>
+                    <div class="bpm-more">+</div>
+                    <p class="bpm-title">bpm</p>
+                </div>
+            </div>
+
+
+            <!-- music-player section -->
+            <div class="music-player">
+
+                <!-- time bar that moves through  -->
+                <div class="time-bar"></div>
+                <!-- title of the rows -->
+                <div class="row-titles-column">
+                    <div class="row-title">Snare</div>
+                    <div class="row-title">Hat</div>
+                    <div class="row-title">Clap</div>
+                    <div class="row-title">Kick</div>
+                </div>
+
+
+                <!-- first column(beat) of the player -->
+                <div class="music-column">
+                    <!-- four little columns in each beat ; to diplay music tiles/block -->
+                    <div class="music-little-column">
+                        <div class="music-tiles music-tiles-snare"></div>
+                        <div class="music-tiles music-tiles-hat"></div>
+                        <div class="music-tiles music-tiles-clap"></div>
+                        <div class="music-tiles music-tiles-kick"></div>
+                    </div>
+                    <div class="music-little-column">
+                        <div class="music-tiles music-tiles-snare"></div>
+                        <div class="music-tiles music-tiles-hat"></div>
+                        <div class="music-tiles music-tiles-clap"></div>
+                        <div class="music-tiles music-tiles-kick"></div>
+                    </div>
+                    <div class="music-little-column">
+                        <div class="music-tiles music-tiles-snare"></div>
+                        <div class="music-tiles music-tiles-hat"></div>
+                        <div class="music-tiles music-tiles-clap"></div>
+                        <div class="music-tiles music-tiles-kick"></div>
+                    </div>
+                    <div class="music-little-column">
+                        <div class="music-tiles music-tiles-snare"></div>
+                        <div class="music-tiles music-tiles-hat"></div>
+                        <div class="music-tiles music-tiles-clap"></div>
+                        <div class="music-tiles music-tiles-kick"></div>
+                    </div>
+                </div>
+
+
+                <!-- second beat/column -->
+                <div class="music-column">
+                    <div class="music-little-column">
+                        <div class="music-tiles music-tiles-snare"></div>
+                        <div class="music-tiles music-tiles-hat"></div>
+                        <div class="music-tiles music-tiles-clap"></div>
+                        <div class="music-tiles music-tiles-kick"></div>
+                    </div>
+                    <div class="music-little-column">
+                        <div class="music-tiles music-tiles-snare"></div>
+                        <div class="music-tiles music-tiles-hat"></div>
+                        <div class="music-tiles music-tiles-clap"></div>
+                        <div class="music-tiles music-tiles-kick"></div>
+                    </div>
+                    <div class="music-little-column">
+                        <div class="music-tiles music-tiles-snare"></div>
+                        <div class="music-tiles music-tiles-hat"></div>
+                        <div class="music-tiles music-tiles-clap"></div>
+                        <div class="music-tiles music-tiles-kick"></div>
+                    </div>
+                    <div class="music-little-column">
+                        <div class="music-tiles music-tiles-snare"></div>
+                        <div class="music-tiles music-tiles-hat"></div>
+                        <div class="music-tiles music-tiles-clap"></div>
+                        <div class="music-tiles music-tiles-kick"></div>
+                    </div>
+                </div>
+
+
+                <!-- third beat/column -->
+                <div class="music-column">
+                    <!-- four little columns in each beat ; to diplay music tiles/block -->
+                    <div class="music-little-column">
+                        <div class="music-tiles music-tiles-snare"></div>
+                        <div class="music-tiles music-tiles-hat"></div>
+                        <div class="music-tiles music-tiles-clap"></div>
+                        <div class="music-tiles music-tiles-kick"></div>
+                    </div>
+                    <div class="music-little-column">
+                        <div class="music-tiles music-tiles-snare"></div>
+                        <div class="music-tiles music-tiles-hat"></div>
+                        <div class="music-tiles music-tiles-clap"></div>
+                        <div class="music-tiles music-tiles-kick"></div>
+                    </div>
+                    <div class="music-little-column">
+                        <div class="music-tiles music-tiles-snare"></div>
+                        <div class="music-tiles music-tiles-hat"></div>
+                        <div class="music-tiles music-tiles-clap"></div>
+                        <div class="music-tiles music-tiles-kick"></div>
+                    </div>
+                    <div class="music-little-column">
+                        <div class="music-tiles music-tiles-snare"></div>
+                        <div class="music-tiles music-tiles-hat"></div>
+                        <div class="music-tiles music-tiles-clap"></div>
+                        <div class="music-tiles music-tiles-kick"></div>
+                    </div>
+                </div>
+
+
+                <!-- fourth beat/column -->
+                <div class="music-column">
+                    <!-- four little columns in each beat ; to diplay music tiles/block -->
+                    <div class="music-little-column">
+                        <div class="music-tiles music-tiles-snare"></div>
+                        <div class="music-tiles music-tiles-hat"></div>
+                        <div class="music-tiles music-tiles-clap"></div>
+                        <div class="music-tiles music-tiles-kick"></div>
+                    </div>
+                    <div class="music-little-column">
+                        <div class="music-tiles music-tiles-snare"></div>
+                        <div class="music-tiles music-tiles-hat"></div>
+                        <div class="music-tiles music-tiles-clap"></div>
+                        <div class="music-tiles music-tiles-kick"></div>
+                    </div>
+                    <div class="music-little-column">
+                        <div class="music-tiles music-tiles-snare"></div>
+                        <div class="music-tiles music-tiles-hat"></div>
+                        <div class="music-tiles music-tiles-clap"></div>
+                        <div class="music-tiles music-tiles-kick"></div>
+                    </div>
+                    <div class="music-little-column">
+                        <div class="music-tiles music-tiles-snare"></div>
+                        <div class="music-tiles music-tiles-hat"></div>
+                        <div class="music-tiles music-tiles-clap"></div>
+                        <div class="music-tiles music-tiles-kick"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- container of all the content on the bottom part of the window -->
+        <section class="bottom-area">
+
+            <!-- container of all the content on the bottom left part of the window -->
+            <section class="bottom-left-area">
+                <!-- title of the part -->
+                <div class="beats-title">beats</div>
+                <!-- titles of the drum box/button row -->
+                <div class="drum-titles-container">
+                    <div class="drum-title">kick</div>
+                    <div class="drum-title">hats</div>
+                    <div class="drum-title">clap</div>
+                    <div class="drum-title">snare</div>
+                </div>
+
+                <!-- all the drum box/button rows inside this  -->
+                <div class="drum-container">
+
+                    <!-- kicks row -->
+                    <div class="drum-bar">
+                        <div class="drum-box kick-box"></div>
+                        <div class="drum-box kick-box"></div>
+                        <div class="drum-box kick-box"></div>
+                        <div class="drum-box kick-box"></div>
+                        <div class="drum-box kick-box"></div>
+                        <div class="drum-box kick-box"></div>
+                        <div class="drum-box kick-box"></div>
+                        <div class="drum-box kick-box"></div>
+                    </div>
+
+                    <!-- hats row -->
+                    <div class="drum-bar">
+                        <div class="drum-box hats-box"></div>
+                        <div class="drum-box hats-box"></div>
+                        <div class="drum-box hats-box"></div>
+                        <div class="drum-box hats-box"></div>
+                        <div class="drum-box hats-box"></div>
+                        <div class="drum-box hats-box"></div>
+                        <div class="drum-box hats-box"></div>
+                        <div class="drum-box hats-box"></div>
+                    </div>
+
+                    <!-- claps row -->
+                    <div class="drum-bar">
+                        <div class="drum-box clap-box"></div>
+                        <div class="drum-box clap-box"></div>
+                        <div class="drum-box clap-box"></div>
+                        <div class="drum-box clap-box"></div>
+                        <div class="drum-box clap-box"></div>
+                        <div class="drum-box clap-box"></div>
+                        <div class="drum-box clap-box"></div>
+                        <div class="drum-box clap-box"></div>
+                    </div>
+
+                    <!-- snares row -->
+                    <div class="drum-bar">
+                        <div class="drum-box snare-box"></div>
+                        <div class="drum-box snare-box"></div>
+                        <div class="drum-box snare-box"></div>
+                        <div class="drum-box snare-box"></div>
+                        <div class="drum-box snare-box"></div>
+                        <div class="drum-box snare-box"></div>
+                        <div class="drum-box snare-box"></div>
+                        <div class="drum-box snare-box"></div>
+                    </div>
+                </div>
+
+            </section>
+            <!-- end of bottom-left area -->
+
+
+            <!-- container of all the content on the bottom right part of the window -->
+            <section class="bottom-right-area">
+                <!-- title of the part -->
+                <div class="melodies-title">melodies</div>
+
+                <!-- title of the melodies box/button rows -->
+                <div class="drum-titles-container">
+                    <div class="drum-title">piano</div>
+                    <div class="drum-title">vocal</div>
+                </div>
+
+
+                <!-- container of all the melodies box/button -->
+                <div class="drum-container">
+                    <!-- piano box/button row -->
+                    <div class="drum-bar">
+                        <div class="drum-box piano-box"></div>
+                        <div class="drum-box piano-box"></div>
+                        <div class="drum-box piano-box"></div>
+                        <div class="drum-box piano-box"></div>
+                        <div class="drum-box piano-box"></div>
+                        <div class="drum-box piano-box"></div>
+                        <div class="drum-box piano-box"></div>
+                        <div class="drum-box piano-box"></div>
+                    </div>
+                    <!-- vocal box/button row -->
+                    <div class="drum-bar">
+                        <div class="drum-box vocal-box"></div>
+                        <div class="drum-box vocal-box"></div>
+                        <div class="drum-box vocal-box"></div>
+                        <div class="drum-box vocal-box"></div>
+                        <div class="drum-box vocal-box"></div>
+                        <div class="drum-box vocal-box"></div>
+                        <div class="drum-box vocal-box"></div>
+                        <div class="drum-box vocal-box"></div>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <div class="information">
+                <button class="information-escape">✕</button>
+                <div class="information-volume">use arrows for the volume ! </div>
+                <div class="information-title">You can play with your keyboard !</div>
+                <div class="information-kick">
+                    <p>use</p>
+                    <p class= key>f</p>
+                    <p>to play the kick</p>
+                </div>
+                <div class="information-drums">
+                    <p>use</p>
+                    <p class= key>k</p>
+                    <p class= key>l</p>
+                    <p class= key>m</p>
+                    <p>to play the drums</p>
+                </div>
+            </div>
+
+
+
+            <!-- part to display and manage effects (not working yet) -->
+            <section class="effects-container">
+
+                <!-- parameters column -->
+                <div class="parameters">
+                    <!-- effect container -->
+                    <div class="effect">
+                        <div class="effect-title">bass</div>
+                        <div class="effect-button bass">
+                            <div class="whiterectangle"></div>
+                        </div>
+                    </div>
+                    <!-- effect container -->
+                    <div class="effect">
+                        <div class="effect-title">treble</div>
+                        <div class="effect-button treble">
+                            <div class="whiterectangle"></div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <!-- sfx column -->
+                <div class="sfx">
+                    <!-- effect container -->
+                    <div class="effect">
+                        <div class="effect-title">reverb</div>
+                        <div class="effect-button">
+                            <div class="whiterectangle"></div>
+                        </div>
+                    </div>
+                    <!-- effect container -->
+                    <div class="effect">
+                        <div class="effect-title">filter</div>
+                        <div class="effect-button">
+                            <div class="whiterectangle"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of effects part -->
+
+            </section>
+
+        </section>
+
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
